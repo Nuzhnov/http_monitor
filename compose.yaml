@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  monitor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python main.py
+    environment:
+        DB_USER: db-user
+        DB_PWD: db-password
+        DB_NAME: db-name
+        DB_HOST: db-host
+        DB_PORT: db-port
